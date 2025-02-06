@@ -52,7 +52,7 @@ table {
     justify-content: center;
     flex-direction: column;
     width: 1000px;
-    border: 1px solid black;
+    border: 1px solid rgb(33, 37, 41);
     border-radius: 24px;
     padding: 24px;
     gap: 16px;
@@ -60,22 +60,23 @@ table {
 
 #title {
     font-size: 60px;
+    color: rgb(52, 58, 64);
 }
 
 #input-container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+    border: 1px solid rgb(52, 58, 64);
     border-radius: 24px;
-    padding: 8px;
-    width: 480px;
-    height: 24px;
+    padding: 16px;
+    width: 900px;
+    height: 28px;
 }
 
 #input-task {
     border: none;
     font-size: 20px;
-    width: 445px;
+    width: 900px;
 }
 
 #input-task:focus {
@@ -83,12 +84,12 @@ table {
 }
 
 #submit-button {
-    width: 28px;
-    height: 24px;
+    width: 36px;
+    height: 32px;
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid rgb(33, 37, 41);
     border-radius: 24px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #submit-button:hover{
@@ -98,5 +99,95 @@ table {
 }
 
 #list-container {
+    display: flex;
+    flex-direction: column;
     font-size: 20px;
+    overflow-y: auto; /* Permite el desplazamiento */
+    width: 900px;
+    max-height: 660px;
+    gap: 20px;
+    /* Para Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: black transparent; /* Thumb negro, fondo transparente */
+  }
+  
+  /* Ancho de la barra de desplazamiento */
+  #list-container::-webkit-scrollbar {
+    width: 8px; /* Ajusta el grosor */
+  }
+  
+  /* Oculta el fondo (track) */
+  #list-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Estilo del thumb (negro) */
+  #list-container::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+
+.task-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid rgb(73, 80, 87);
+    border-radius: 24px;
+}
+
+.task {
+    padding: 1px 2px;
+    width: 700px;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.complete-task {
+    width: 36px;
+    height: 32px;
+    color: green;
+    background-color: transparent;
+    border: 1px solid rgb(33, 37, 41);
+    border-radius: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.complete-task:hover{
+    cursor: pointer;
+    color: white;
+    background-color: green;
+}
+
+.delete-task {
+    width: 36px;
+    height: 32px;
+    color: red;
+    background-color: transparent;
+    border: 1px solid rgb(33, 37, 41);
+    border-radius: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.delete-task:hover{
+    cursor: pointer;
+    color: white;
+    background-color: red;
+}
+
+.edit-task {
+    width: 36px;
+    height: 32px;
+    background-color: transparent;
+    border: 1px solid rgb(33, 37, 41);
+    border-radius: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.edit-task:hover{
+    cursor: pointer;
+    background-color: bisque;
 }
